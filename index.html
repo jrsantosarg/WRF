@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteorological Wind Fields</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Wind Field Output Viewer</h1>
+    </header>
+
+    <div class="tab-container">
+        <button class="tablinks active" onclick="openTab(event, 'WRF')">WRF Output</button>
+        <button class="tablinks" onclick="openTab(event, 'GFS')">GFS Output</button>
+    </div>
+
+    <div id="WRF" class="tabcontent" style="display: block;">
+        <h3>WRF Model Animations</h3>
+        <ul class="anim-index">
+            <li><a href="#" onclick="loadAnim('WRFmodel/wrfout_d01_2026-05-15_00Z_mdBZ.html'); return false;">WRF: Surface Wind Field</a></li>
+            <li><a href="#" onclick="loadAnim('WRFmodel/wrfout_d01_2026-05-15_00Z_PRECIPACCUM.html'); return false;">WRF: 850 hPa Wind Field</a></li>
+        </ul>
+    </div>
+
+    <div id="GFS" class="tabcontent">
+        <h3>GFS Model Animations</h3>
+        <ul class="anim-index">
+            <li><a href="#" onclick="loadAnim('GFS/gfs_pwat_anom_sudamerica_sur_latest.html'); return false;">GFS: Global Surface Wind</a></li>
+            <li><a href="#" onclick="loadAnim('GFS/gfs_vorticity_sudamerica_sur_72h.html'); return false;">GFS: 250 hPa Wind Field</a></li>
+        </ul>
+    </div>
+
+    <div class="viewer-wrapper">
+        <iframe id="animViewer" src="" title="Animation Viewer" frameBorder="0"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- Actualizacion: $(date) -->
