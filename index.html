@@ -3,33 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meteorological Wind Fields</title>
+    <title>Model Outputs Test</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Wind Field Output Viewer</h1>
+        <h1>Viewer</h1>
     </header>
 
     <div class="tab-container">
-        <button class="tablinks active" onclick="openTab(event, 'WRF')">WRF Output</button>
-        <button class="tablinks" onclick="openTab(event, 'GFS')">GFS Output</button>
+        <button class="tablinks active" onclick="openTab(event, 'WRF')">WRF Model</button>
+        <button class="tablinks" onclick="openTab(event, 'GFS')">GFS Model</button>
     </div>
 
     <div id="WRF" class="tabcontent" style="display: block;">
         <h3>WRF Model Animations</h3>
         <ul class="anim-index">
-            <li><a href="#" onclick="loadAnim('WRFmodel/wrfout_d01_2026-05-15_00Z_mdBZ.html'); return false;">WRF: Surface Wind Field</a></li>
-            <li><a href="#" onclick="loadAnim('WRFmodel/wrfout_d01_2026-05-15_00Z_PRECIPACCUM.html'); return false;">WRF: 850 hPa Wind Field</a></li>
+            <li><a href="#" onclick="loadAnim('WRFmodel/wrfout_d01_2026-05-15_00Z_mdBZ.html'); return false;">WRF: Reflectivity</a></li>
+            <li><a href="#" onclick="loadAnim('WRFmodel/wrfout_d01_2026-05-15_00Z_PRECIPACCUM.html'); return false;">WRF: Precip</a></li>
         </ul>
     </div>
 
     <div id="GFS" class="tabcontent">
         <h3>GFS Model Animations</h3>
         <ul class="anim-index">
-            <li><a href="#" onclick="loadAnim('GFS/gfs_pwat_anom_sudamerica_sur_latest.html'); return false;">GFS: Global Surface Wind</a></li>
-            <li><a href="#" onclick="loadAnim('GFS/gfs_vorticity_sudamerica_sur_72h.html'); return false;">GFS: 250 hPa Wind Field</a></li>
+            <li><a href="#" onclick="loadAnim('GFS/gfs_pwat_anom_sudamerica_sur_latest.html'); return false;">GFS: Pwat Anomaly</a></li>
+            <li><a href="#" onclick="loadAnim('GFS/gfs_vorticity_sudamerica_sur_72h.html'); return false;">GFS: Vorticity</a></li>
         </ul>
     </div>
 
